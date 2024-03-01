@@ -71,8 +71,6 @@ jobs:
             abortOnChangeCreationFailure: true  #optional, default is true
             # This value will be used to resume or abort the pipeline after a timeout has occurred in case a change step is still in a pending state.
             abortOnChangeStepTimeout: true # optional, default is true
-            # The customized inputs to process deployment gate job related change.
-            deployment-gate: '{"environment": "Prod","jobName":"deploy"}'
           
 
   deploy:
