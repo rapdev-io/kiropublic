@@ -66,7 +66,7 @@ jobs:
             tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
             job-name: ${{ github.job }}
             context-github: ${{ toJSON(github) }}
-            change-request: '{"attributes":{"short_description":"KiroTestChange"}}'
+            change-request: '{"setCloseCode":"true","attributes":{"short_description":"KiroTestChange"}}'
             # This value will be used to resume or abort the pipeline if the change is not created within the mentioned time period in changeCreationTimeOut. 
             abortOnChangeCreationFailure: true  #optional, default is true
             # This value will be used to resume or abort the pipeline after a timeout has occurred in case a change step is still in a pending state.
