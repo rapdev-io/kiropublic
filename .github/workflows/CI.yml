@@ -78,7 +78,6 @@ jobs:
   deploy:
      needs: ChangeStep
      runs-on: ubuntu-latest
-     environment: Prod
      steps:
        - name: Run a one-line script
          run: echo Hello, world!
