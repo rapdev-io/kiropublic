@@ -34,7 +34,7 @@ jobs:
         # uses: ServiceNow/servicenow-devops-register-artifact@af7fe381e9dcf40da93d4c47e82172d96b330003
         uses: ServiceNow/servicenow-devops-register-artifact@v3.1.0
         with:
-          devops-integration-token: ${{ secrets.SN_TOKEN }}
+          devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           job-name: ${{ github.job }}
@@ -44,7 +44,7 @@ jobs:
       - name: ServiceNow DevOps Register Package
         uses: ServiceNow/servicenow-devops-register-package@v3.1.0
         with:
-          devops-integration-token: ${{ secrets.SN_TOKEN }}
+          devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
           instance-url: ${{ secrets.SN_INSTANCE_URL }}
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           context-github: ${{ toJSON(github) }}
