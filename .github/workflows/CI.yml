@@ -57,7 +57,7 @@ jobs:
           
 
   deploy:
-     needs: ChangeStep
+     needs: build
      runs-on: ubuntu-latest
      environment: production
      steps:
