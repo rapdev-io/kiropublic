@@ -9,7 +9,7 @@ jobs:
 
   build:
     #runs-on: [self-hosted]
-    runs-on: snc_devops1
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
@@ -40,7 +40,7 @@ jobs:
           
   ChangeStep:
      #runs-on: [self-hosted]
-     runs-on: snc_devops1
+     runs-on: ubuntu-latest
      needs: build
      timeout-minutes: 600
      steps:
@@ -65,8 +65,7 @@ jobs:
 
   deploy:
      needs: ChangeStep
-     #runs-on: [self-hosted]
-     runs-on: snc_devops1
+     runs-on: ubuntu-latest
      steps:
        - name: Sleep for 30 seconds
          run: Start-Sleep -s 60
