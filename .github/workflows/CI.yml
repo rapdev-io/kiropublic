@@ -49,7 +49,7 @@ jobs:
            tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
            job-name: ${{ github.job }}
            context-github: ${{ toJSON(github) }}
-           change-request: ''
+           change-request: '{"setCloseCode":"true","attributes":{"short_description":"KiroTestChange"}}'
            abortOnChangeCreationFailure: true #optional, default is true
            abortOnChangeStepTimeout: true #optional, default is true
            
