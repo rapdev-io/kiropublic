@@ -1,11 +1,11 @@
 # This is a basic workflow to help you get started with Actions
-
 name: CI
 
 # Controls when the workflow will run
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -44,7 +44,6 @@ jobs:
        - name: ServiceNow DevOps Change Automation
          uses: ServiceNow/servicenow-devops-change@v3.1.0
          with:
-           #ServiceNow Instance URL
            instance-url: ${{ secrets.SN_INSTANCE_URL }}
            devops-integration-token: ${{ secrets.SN_DEVOPS_INTEGRATION_TOKEN }}
            tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
@@ -52,10 +51,7 @@ jobs:
            context-github: ${{ toJSON(github) }}
            change-request: '{"setCloseCode":"true","attributes":{"short_description":"KiroTestChange"}}'
            abortOnChangeCreationFailure: true #optional, default is true
-           #This value will be used to resume or abort the pipeline after a timeout has occurred in case a change step is still in a pending state.
            abortOnChangeStepTimeout: true #optional, default is true
-       - name: break it
-         run: exit 1
            
   deploy:
      #needs: build
