@@ -44,8 +44,6 @@ jobs:
      needs: build
      timeout-minutes: 600
      steps:
-       - name: Sleep for 30 seconds
-         run: Start-Sleep -s 30
          #shell: pwsh
        - name: ServiceNow DevOps Change Automation
          uses: ServiceNow/servicenow-devops-change@v3.1.0
