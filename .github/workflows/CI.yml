@@ -65,8 +65,6 @@ jobs:
      needs: ChangeStep
      runs-on: ubuntu-latest
      steps:
-       - name: Sleep for 30 seconds
-         run: Start-Sleep -s 60
          #shell: pwsh
        - name: Run a one-line script
          run : exit 1
