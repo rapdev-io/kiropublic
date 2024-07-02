@@ -56,7 +56,6 @@ jobs:
   POSTdeploy:
      needs: deploy
      runs-on: ubuntu-latest
-     environment: production
      steps:
          #shell: pwsh
        - name: Run a one-line script
