@@ -22,6 +22,7 @@ jobs:
           context-github: ${{ toJSON(github) }}
           artifacts: '[{"name": "KIRO-artifact", "version": "1.${{ github.run_number }}.0", "repositoryName": "${{ github.repository }}"}]'
   Package:
+     needs: build
      runs-on: ubuntu-latest
      steps:
         - name: ServiceNow DevOps Register Package
@@ -35,11 +36,28 @@ jobs:
             # Name of the Package that contains list of artifacts
             package-name: SamplePackage
             job-name: ${{ github.job }}
+  staging:
+     needs: Package
+     runs-on: ubuntu-latest
+     environment: staging
+     steps:
+         #shell: pwsh
+       - name: Run a one-line script
+         run : echo deployed!
   deploy:
-     needs: build
+     needs: staging
      runs-on: ubuntu-latest
      environment: production
      steps:
          #shell: pwsh
        - name: Run a one-line script
          run : echo deployed!
+         
+  POSTdeploy:
+     needs: deploy
+     runs-on: ubuntu-latest
+     environment: production
+     steps:
+         #shell: pwsh
+       - name: Run a one-line script
+         run : echo post deployment checks!
