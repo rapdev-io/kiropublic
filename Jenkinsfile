@@ -13,10 +13,8 @@ pipeline {
             }
         }
         stage('test') {
-            post {
-                always {
+             steps {
                     junit 'build/reports/**/Junit-3.xml'
-                }
             }
         }
         stage('change Control') {
