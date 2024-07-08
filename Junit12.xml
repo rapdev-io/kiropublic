@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<testsuites>
-  <testsuite errors="0" failures="0" hostname="myhost" id="0" name="TestMessage412" package="com.sample.test" skipped="0" tests="1" time="0.063" timestamp="2015-01-13T07:23:07">
-      <properties>
-      </properties>
-      <testcase classname="com.sample.test.TestMessage" name="test_welcome_message" time="0.002" />
-      <system-out><![CDATA[]]></system-out>
-      <system-err><![CDATA[]]></system-err>
-  </testsuite>
-  <testsuite errors="0" failures="1" hostname="myhost" id="1" name="TestMessage2123" package="com.sample.test" skipped="0" tests="2" time="0.06" timestamp="2015-01-13T07:23:08">
-      <properties>
-      </properties>
-      <testcase classname="com.sample.test.TestMessage2" name="test_welcome_message_2" time="0.001" />
-      <testcase classname="com.sample.test.TestMessage2" name="test_welcome_message_3" time="0.003" ><testcase/>
-      <system-out><![CDATA[]]></system-out>
-      <system-err><![CDATA[]]></system-err>
-  </testsuite>
-</testsuites>
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="1" name="com.howtodoinjava.junit5.examples.xmlReport.HelloTest" 
+	skipped="0" tests="2" time="0.076" version="3.0">
+	<properties>
+		<property name="java.specification.version" value="17"/>
+		<property name="sun.cpu.isalist" value="amd64"/>
+		<property name="sun.jnu.encoding" value="Cp1252"/>
+		<property name="java.class.path" value="..."/>
+		<property name="java.vm.vendor" value="Oracle Corporation"/>
+	</properties>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest" name="testOne" time="0.04"/>
+	<testcase classname="com.howtodoinjava.junit5.examples.xmlReport.HelloTest" name="testTwo" time="0.008">
+		<failure message="expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError">
+			<![CDATA[org.opentest4j.AssertionFailedError: expected: <true>but was: <false>at 
+			org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)...]]>
+		</failure>
+	</testcase>
+</testsuite>
