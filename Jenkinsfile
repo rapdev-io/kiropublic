@@ -14,7 +14,7 @@ pipeline {
         }
         stage('test') {
              steps {
-                    junit 'build/reports/**/Junit-3.xml'
+                    junit 'Junit-3.xml'
             }
         }
         stage('change Control') {
