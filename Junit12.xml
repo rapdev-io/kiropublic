@@ -11,7 +11,14 @@
       <properties>
       </properties>
       <testcase classname="com.sample.test.TestMessage2" name="test_welcome_message_2" time="0.001" />
-      <testcase classname="com.sample.test.TestMessage2" name="test_welcome_message_3" time="0.003" />
+      <testcase classname="com.sample.test.TestMessage2" name="test_welcome_message_3" time="0.003" >
+    <failure message="PROGRAM.cbl:2 Use a program name that matches the source file name" type="WARNING">
+WARNING: Use a program name that matches the source file name
+Category: COBOL Code Review – Naming Conventions
+File: /project/PROGRAM.cbl
+Line: 2
+      </failure>
+        <testcase/>
       <system-out><![CDATA[]]></system-out>
       <system-err><![CDATA[]]></system-err>
   </testsuite>
