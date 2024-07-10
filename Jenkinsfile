@@ -17,7 +17,11 @@ pipeline {
                     junit 'Junit*.xml'
             }
         }
-    
+        stage('test') {
+             steps {
+                    sh 'ls'
+            }
+        }
         stage('test2') {
              steps {
                     bat 'copy /b Junit*.xml +,,'
