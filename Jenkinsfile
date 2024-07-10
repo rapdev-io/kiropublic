@@ -20,7 +20,7 @@ pipeline {
     */
         stage('test2') {
              steps {
-                    sh 'find . -name "TEST-*.xml" -exec touch {} \\;'
+                    sh 'find . -name "*.xml" -exec touch {} \\;'
                     xunit checksName: '', tools: [JUnit(excludesPattern: '', pattern: 'Junit*.xml', skipNoTestFiles: true, stopProcessingIfError: false)]
             }
         }
