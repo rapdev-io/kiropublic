@@ -19,7 +19,7 @@ pipeline {
         }
         stage('shell') {
              steps {
-                    sh 'ls'
+                    bat 'ls'
             }
         }
         stage('test2') {
@@ -31,7 +31,7 @@ pipeline {
         stage('sonarscan') {
              steps {
                  withSonarQubeEnv(installationName: 'sq') {
-                     sh 'mvn clean package sonar:sonar'
+                     bat 'mvn clean package sonar:sonar'
                 }
             }
         }
