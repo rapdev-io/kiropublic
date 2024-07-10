@@ -26,7 +26,7 @@ pipeline {
         stage('sonarscan') {
              steps {
                  withSonarQubeEnv(installationName: 'sq') {
-                     bat 'mvn clean package sonar:sonar'
+                    bat "sonar-scanner.bat -Dsonar.projectKey=rapdevsonar_rapdev -Dsonar.sources=./ -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=3af64214e6a0a903cf4521e04b2d466ea873c54a"
                 }
             }
         }
