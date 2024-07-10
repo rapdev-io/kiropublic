@@ -23,7 +23,15 @@ pipeline {
                     xunit checksName: '', tools: [JUnit(excludesPattern: '', pattern: 'Junit*.xml', skipNoTestFiles: true, stopProcessingIfError: false)]
             }
         }
-        stage('sonarscan') {
+       /* stage('sonarscan') {
+             steps {
+                 withSonarQubeEnv(installationName: 'sq') {
+                    bat 'sonar-scanner -D"sonar.organization=rapdevsonar" -D"sonar.projectKey=rapdevsonar_rapdev"  -D"sonar.sources=." -D"sonar.host.url=https://sonarcloud.io'
+                }
+            }
+        }
+        */
+        stage('sonarscan2') {
              steps {
                  withSonarQubeEnv(installationName: 'sq') {
                     bat 'sonar-scanner -D"sonar.organization=rapdevsonar" -D"sonar.projectKey=rapdevsonar_rapdev"  -D"sonar.sources=." -D"sonar.host.url=https://sonarcloud.io'
