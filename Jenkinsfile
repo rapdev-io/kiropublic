@@ -20,7 +20,8 @@ pipeline {
     */
         stage('test2') {
              steps {
-                    sh 'touch *.xml'
+                    sh '''pwd
+                        touch *.xml'''
                     xunit checksName: '', tools: [JUnit(excludesPattern: '', pattern: 'Junit*.xml', skipNoTestFiles: true, stopProcessingIfError: false)]
             }
         }
