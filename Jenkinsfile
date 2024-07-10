@@ -26,7 +26,7 @@ pipeline {
         stage('sonarscan') {
              steps {
                  withSonarQubeEnv(installationName: 'sq') {
-                    bat '''sonar-scanner.bat \\
+                    bat '''sonar-scanner \\
   -D"sonar.organization=rapdevsonar" \\
   -D"sonar.projectKey=rapdevsonar_rapdev" \\
   -D"sonar.sources=." \\
