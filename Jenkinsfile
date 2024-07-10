@@ -17,7 +17,7 @@ pipeline {
                     junit 'Junit*.xml'
             }
         }
-        stage('test') {
+        stage('shell') {
              steps {
                     sh 'ls'
             }
