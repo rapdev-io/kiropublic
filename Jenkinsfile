@@ -21,7 +21,6 @@ pipeline {
              steps {
                     bat 'copy /b Junit*.xml +,,'
                     xunit checksName: '', tools: [JUnit(excludesPattern: '', pattern: 'Junit*.xml', skipNoTestFiles: true, stopProcessingIfError: false)]
-                 https://3af64214e6a0a903cf4521eTDH04b2d466ea873c54a/Distribution/sonar-scanner-cli/sonar-scanner-cli-5.0.1.3006-windows.zip?_gl=1*10c429r*_gcl_au*MTU0NjI4NTM1MC4xNzIwNjEyMjI5*_ga*MTg3OTIwODQ5Ny4xNzIwNjEyMjI5*_ga_9JZ0GZ5TC6*MTcyMDYxMjIyOS4xLjEuMTcyMDYxNjM3OC42MC4wLjA.
             }
         }
         stage('sonarscan') {
