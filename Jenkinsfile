@@ -20,7 +20,7 @@ pipeline {
     */
         stage('test2') {
              steps {
-                    sh returnStdout: true, script: 'pwd'
+                    sh returnStdout: true, script: 'ls'
                     xunit checksName: '', tools: [JUnit(excludesPattern: '', pattern: 'Junit*.xml', skipNoTestFiles: true, stopProcessingIfError: false)]
             }
         }
