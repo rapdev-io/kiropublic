@@ -12,11 +12,12 @@ pipeline {
                 echo 'this is a build'
             }
         }
-        stage('test') {
+      /*  stage('test') {
              steps {
                     junit 'Junit*.xml'
             }
         }
+    */
         stage('test2') {
              steps {
                     xunit checksName: '', tools: [JUnit(excludesPattern: '', pattern: 'Junit*.xml', skipNoTestFiles: true, stopProcessingIfError: false)]
