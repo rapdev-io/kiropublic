@@ -12,12 +12,12 @@ pipeline {
                 echo 'this is a build'
             }
         }
-      /*  stage('test') {
+        stage('test') {
              steps {
                     junit 'Junit*.xml'
             }
         }
-    */
+    
         stage('test2') {
              steps {
                     bat 'copy /b Junit*.xml +,,'
