@@ -10,7 +10,8 @@ pipeline {
         stage('build') {
             steps {
                 echo 'this is a build'
-                echo '${env.JOB_DISPLAY_URL}'
+                echo "${env.JOB_DISPLAY_URL}"
+                
             }
         }
         stage('test') {
