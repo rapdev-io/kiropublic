@@ -16,8 +16,9 @@ pipeline {
                 echo "${env.BUILD_URL}"
                 echo "${env.JOB_URL}"
                 echo "${env.BUILD_TAG}"
-           
-                
+                echo "${env.NODE_NAME}"
+                echo "${env.WORKSPACE}"
+                 echo "${env.EXECUTOR_NUMBER}"
             }
         }
         stage('test') {
