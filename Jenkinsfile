@@ -11,6 +11,12 @@ pipeline {
             steps {
                 echo 'this is a build'
                 echo "${env.JOB_DISPLAY_URL}"
+                echo "${env.RUN_DISPLAY_URL}"
+                echo "${env.JENKINS_URL}"
+                echo "${env.BUILD_URL}"
+                echo "${env.JOB_URL}"
+                echo "${env.BUILD_TAG}"
+           
                 
             }
         }
