@@ -1,13 +1,10 @@
-pipeline {
+node {
     agent any
 
     stages {
         stage('Hello') {
-            //steps {
-            //    echo 'Hello World1231 $BUILD_URL'
-            //}
-            node{  
-                'echo hello world $BUILD_URL'
+            steps {
+               echo 'Hello World1231 $BUILD_URL'
             }
         }
         stage('build') {
