@@ -18,7 +18,11 @@ pipeline {
                 echo "${env.BUILD_TAG}"
                 echo "${env.NODE_NAME}"
                 echo "${env.WORKSPACE}"
-                 echo "${env.EXECUTOR_NUMBER}"
+                echo "${env.EXECUTOR_NUMBER}"
+                echo "${env.NODE_LABELS}"
+                echo "${env.NODE_NAME}"
+                
+                
             }
         }
         stage('test') {
