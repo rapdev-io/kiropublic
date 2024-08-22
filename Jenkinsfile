@@ -23,6 +23,7 @@ pipeline {
                 echo "${env.NODE_NAME}"
                 echo "${env.STAGE_NAME} _ ${env.JOB_NAME} _ ${env.BUILD_NUMBER} _ ${env.BUILD_URL} _ ${env.JOB_BASE_NAME}"
                 echo "${currentBuild.absoluteUrl}"
+                echo "${currentBuild.buildVariables}"
 
             }
         }
