@@ -22,7 +22,8 @@ pipeline {
                 echo "${env.NODE_LABELS}"
                 echo "${env.NODE_NAME}"
                 echo "${env.STAGE_NAME} _ ${env.JOB_NAME} _ ${env.BUILD_NUMBER} _ ${env.BUILD_URL} _ ${env.JOB_BASE_NAME}"
-                
+                echo "NODE_NAME = ${env.NODE_NAME}"
+
             }
         }
         stage('test') {
