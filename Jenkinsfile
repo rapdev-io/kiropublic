@@ -21,7 +21,7 @@ pipeline {
                 echo "${env.EXECUTOR_NUMBER}"
                 echo "${env.NODE_LABELS}"
                 echo "${env.NODE_NAME}"
-                
+                echo "${env.STAGE_NAME} ${env.JOB_NAME} [${env.BUILD_NUMBER}]" (${env.BUILD_URL})"
                 
             }
         }
