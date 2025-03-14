@@ -1,3 +1,6 @@
-tasda12312
-asdas 
-asdzxc
+GITHUB_TOKEN = "YOUR_GITHUB_TOKEN"
+OWNER = "OWNER"
+REPO = "REPO"
+FILE_PATH = "example.txt"
+BRANCH = "main"
+NEW_CONTENT = "Updated file content"
