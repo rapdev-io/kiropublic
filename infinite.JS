@@ -16,6 +16,8 @@
         if (response.capabilities[capabilityId].status == "success") {
             response = JSON.parse(response.capabilities[capabilityId].response);
             gs.info(JSON.parse(response.model_output));
+        } else {
+            break;
         }
     }
     }
