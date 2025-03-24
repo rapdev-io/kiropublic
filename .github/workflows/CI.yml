@@ -49,19 +49,10 @@ jobs:
           tool-id: ${{ secrets.SN_ORCHESTRATION_TOOL_ID }}
           job-name: ${{ github.job }}
           context-github: ${{ toJSON(github) }}
-          
-  staging:
-     needs: Package
-     runs-on: ubuntu-latest
-     environment: staging
-     steps:
-         #shell: pwsh
-       - name: Run a one-line script
-         run : echo deployed!
+
   deploy:
-     needs: staging
+     needs: changeStep
      runs-on: ubuntu-latest
-     environment: production
      steps:
          #shell: pwsh
        - name: Run a one-line script
