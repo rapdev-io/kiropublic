@@ -4,7 +4,7 @@
     var myList = [1,2,3];
     if (chgID) {
     // while loop to execute for all index in myList
-    while(true){
+    for(var i = 0; i < myList.length; i++){
         var request = {
             executionRequests: [{
                 payload: {
