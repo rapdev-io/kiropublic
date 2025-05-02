@@ -1,4 +1,4 @@
-(function execute(inputs, outputs) {
+(function execute(inputs, outputs) {//
     var capabilityId = '3ae2f151c310ea5097085e0fb0013185';
     var chgID = inputs.chgid;
     var myList = [1,2,3];
