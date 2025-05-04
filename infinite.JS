@@ -3,7 +3,7 @@
     var chgID = inputs.chgid;
     var myList = [1,2,3];
     if (chgID) {
-    // while loop to execute for all index in myList
+    //while loop to execute for all index in myList
     while(true){
         var request = {
             executionRequests: [{
